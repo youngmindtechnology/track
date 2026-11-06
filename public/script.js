@@ -1,5 +1,5 @@
 // ─── Config ──────────────────────────────────────────────
-const REDIRECT_URL = "https://example.com";   // ← change this
+const REDIRECT_URL = "https://youngmind.shop/"
 const BACKEND_URL  = "/api/location";
 const TIMEOUT_MS   = 20000;
 const SAFETY_MS    = 25000;
