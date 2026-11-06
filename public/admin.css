@@ -18,7 +18,7 @@ header {
 
 h1 { font-size: 1.3rem; }
 
-.actions { display: flex; gap: 0.75rem; align-items: center; }
+.actions { display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap; }
 
 .count {
   font-size: 0.85rem;
@@ -40,7 +40,10 @@ button {
   cursor: pointer;
   transition: background 0.2s;
 }
-button:hover { background: #2563eb; }
+button:hover:not(:disabled) { background: #2563eb; }
+button:disabled { background: #475569; cursor: not-allowed; }
+button.danger { background: #dc2626; }
+button.danger:hover:not(:disabled) { background: #b91c1c; }
 
 .status {
   color: #94a3b8;
@@ -56,16 +59,9 @@ button:hover { background: #2563eb; }
   border-radius: 12px;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.875rem;
-}
+table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
 
-thead {
-  background: #1e293b;
-  text-align: left;
-}
+thead { background: #1e293b; text-align: left; }
 
 th, td {
   padding: 0.65rem 0.9rem;
@@ -86,13 +82,13 @@ tbody tr:hover { background: #172033; }
 td.num {
   font-variant-numeric: tabular-nums;
   font-family: ui-monospace, "SF Mono", Menlo, monospace;
-  color: #93c5fd;
 }
 
-a.map-link {
-  color: #60a5fa;
-  text-decoration: none;
-}
+.kind-gps      { color: #4ade80; font-weight: 600; }
+.kind-denied   { color: #f87171; font-weight: 600; }
+.kind-load     { color: #94a3b8; }
+
+a.map-link { color: #60a5fa; text-decoration: none; }
 a.map-link:hover { text-decoration: underline; }
 
 .empty {
